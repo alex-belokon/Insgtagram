@@ -26,13 +26,11 @@ export default function SignUp() {
           .auth()
           .createUserWithEmailAndPassword(emailAddress, password);
 
-        // authentication
-        // -> emailAddress & password & username (displayName)
+        
         await createdUserResult.user.updateProfile({
           displayName: username
         });
 
-        // firebase user collection (create a document)
         await firebase
           .firestore()
           .collection('users')
