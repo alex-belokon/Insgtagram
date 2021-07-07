@@ -1,0 +1,94 @@
+[
+    {
+        "id": "1",
+        "name": "enjoycamp",
+        "age": 25,
+        "url": "./usersImages/enjoycamp/01_enjoycamp.jpg",
+        "country": "Ukraine",
+        "city": "Kiev",
+        "LifeСredo": "Добром нужно платить на добро,а на зло нужно платить справедливостью",
+        "url1": ".././src/usersImages/enjoycamp/01_enjoycamp.jpg"
+    },
+    {
+        "id": "2",
+        "name": "floydmayweather",
+        "age": 32,
+        "url": "./usersImages/floydmayweather/01_floydmayweather.jpg",
+        "country": "USA",
+        "city": "Boston",
+        "LifeСredo": "Enjoy every moment"
+        
+    },
+    {
+        "id": "3",
+        "name": "katerinakhaidukova",
+        "age": 23,
+        "url": "./usersImages/katerinakhaidukova/01_katerinakhaidukova.jpg",
+        "country": "Russian",
+        "city": "Moscow",
+        "LifeСredo": "Нельзя брать прошлое с собой. И нельзя оглядываться,это утомляет и ведёт к гибели."
+    },
+    {
+        "id": "4",
+        "name": "mendel044",
+        "age": 29,
+        "url": "./usersImages/mendel044/01_mendel044.jpg",
+        "country": "Greece",
+        "city": "Athens",
+        "LifeСredo": "Follow your heart"
+    },
+    {
+        "id": "5",
+        "name": "mendel044",
+        "age": 32,
+        "url": "./usersImages/mr.benytskyi/01_mr.benytskyi.jpg",
+        "country": "Belarus",
+        "city": "Minsk",
+        "LifeСredo": "Есть желание, - тысяча способов; нет желания, - тысяча поводов!"
+    },
+    {
+        "id": "6",
+        "name": "pechivo",
+        "age": 27,
+        "url": "./usersImages/pechivo/01_pechivo.jpg",
+        "country": "Bulgaria",
+        "city": "La Paz",
+        "LifeСredo": "Любовь – самое великое безумие мужчины и женщины"
+    },
+    {
+        "id": "7",
+        "name": "pim_wessels",
+        "age": 37,
+        "url": "./usersImages/pim_wessels/01_pim_wessels.jpg",
+        "country": "Canada",
+        "city": "Ottawa",
+        "LifeСredo": "Work hard. Dream big"
+    },
+    {
+        "id": "8",
+        "name": "tessabrooks",
+        "age": 30,
+        "url": "./usersImages/tessabrooks/01_tessabrooks.jpg",
+        "country": "Egypt",
+        "city": "Sharm el sheikh",
+        "LifeСredo": "Money often costs too much"
+    },
+    {
+        "id": "9",
+        "name": "yulia_akimenkooo",
+        "age": 29,
+        "url": "./usersImages/yulia_akimenkooo/01_yulia_akimenkooo.jpg",
+        "country": "Ukraine",
+        "city": "Kiev",
+        "LifeСredo": "Побороть дурные привычки легче сегодня, чем завтра"
+    },
+    {
+        "id": "10",
+        "name": "zaharchuk_u",
+        "age": 26,
+        "url": "./usersImages/zaharchuk_u/01_zaharchuk_u.jpg",
+        "country": "Ukraine",
+        "city": "Kiev",
+        "LifeСredo": "Истинная жизнь человека - та, о которой он даже не подозревает"
+    }
+]
