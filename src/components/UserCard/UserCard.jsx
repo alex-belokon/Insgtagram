@@ -10,16 +10,7 @@ import "./style.scss"
 
 const UserCard = (props) => {
 
-    //const dispatch = useDispatch()
     const { name, url,  isInfavorite, id, toggleFavorite, LifeСredo} = props
-
-    // const modalFirstOpenWindow = () => {
-    //     const isOpenData = true
-    //     const vendoreCode = props.vendorСode
-    //     dispatch(modalFirstOpen(isOpenData))
-    //     dispatch(vendorCodePrime(vendoreCode))
-    // }
-    console.log(url);
 
     return (
         <li className="container-card">

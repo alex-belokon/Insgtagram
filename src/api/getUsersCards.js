@@ -6,4 +6,3 @@ const getUsersCards = () => {
 
 export default getUsersCards;
 
-console.log("карточки", getUsersCards);
