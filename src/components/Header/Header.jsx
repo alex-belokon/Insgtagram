@@ -26,7 +26,7 @@ const Header = () => {
             color="#333333"
             className="icon-heart icon" />
             <div className="user">
-              <img src={LogoUser}  className="user-logo"/>
+              <img src={LogoUser} alt="user" className="user-logo"/>
             </div>
         </div>         
     </div>
