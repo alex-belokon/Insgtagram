@@ -65,16 +65,13 @@ const Main = () => {
         <div >
         <Header/>
             <div className="container-main">
-            <div className="split left">
-                <div className="centered">
+            <div className="left">
                   <AppRoutes
-             toggleAdded={toggleAdded} 
-             toggleFavorite={toggleFavorite}
-            cards={cards} />
-                 </div>
+                   toggleAdded={toggleAdded} 
+                   toggleFavorite={toggleFavorite}
+                   cards={cards} />
              </div>
-
-            <div className="split right">
+             <div className="right">
                 <div className="firstFrendsWindow">             
                   <FriendsCards cards={cards}
                   toggleAdded={toggleAdded} 
@@ -84,10 +81,10 @@ const Main = () => {
                  <NoFriendsCards cards={cards}
                   toggleAdded={toggleAdded} 
                   toggleFavorite={toggleFavorite}/>
-                 </div>
+                </div>
             </div>  
         </div>
-        </div>        
+     </div>        
     )
 }
 

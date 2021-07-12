@@ -3,7 +3,6 @@ import UserCard from '../UserCard/UserCard';
 
 
 const UserList = (props) => {
-    
 
     const {toggleAdded, toggleFavorite, cards} =props
     

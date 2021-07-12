@@ -6,6 +6,8 @@ import { home } from "./home.js";
 import { arrow } from "./arrow.js";
 import { compass } from "./compass.js";
 import { heart } from "./heart.js";
+import {coment} from "./coment.js";
+import {save} from "./save.js"
 
 
 export {
@@ -16,5 +18,7 @@ export {
     home,
     arrow,
     compass,
-    heart
+    heart,
+    coment,
+    save
 }

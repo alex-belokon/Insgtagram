@@ -2,7 +2,7 @@ import React from 'react';
 import * as Icons from '../../themes/icons'
 
 const Icon = (props) => {
-  const { type, color, onClick, className } = props
+  const { type, color, onClick, className, stroke } = props
   const IconJSX = Icons[type]
 
   if (!IconJSX) return null
@@ -11,7 +11,8 @@ const Icon = (props) => {
     <span onClick={onClick}>
       {IconJSX({
         color: color,
-        className: className
+        className: className,
+        stroke: stroke
       })}
     </span>
   );

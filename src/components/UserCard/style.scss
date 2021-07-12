@@ -1,17 +1,22 @@
 .container-card {
   border: 1px solid blue;
   width: 616px;
-  height: 1089.5px;
+  min-height: auto;
+  max-height: 911px;
+}
+.image-container {
+  grid-column-start: 1;
 }
 
 .album__image {
-  max-width: 100%;
+  min-width: 100%;
+  height: auto;
 }
 
 .title-card {
   display: flex;
   flex-direction: row;
-  
+
   &__name {
     margin-top: 3px;
     font-family: "Times New Roman", Times, serif;
@@ -61,4 +66,20 @@
   border-radius: 50%;
   vertical-align: middle;
   box-shadow: 0 0 0 0.15em rgb(250, 0, 250) inset;
+}
+.icons-container {
+  display: flex;
+  align-items: center;
+}
+.icons-box {
+  padding: 12px 12px 12px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.star-class {
+  margin-right: 12px;
+  cursor: pointer;
+}
+.coment-class {
+  margin-right: 12px;
 }
