@@ -8,7 +8,17 @@
         "city": "Kiev",
         "LifeСredo": "Добром нужно платить на добро,а на зло нужно платить справедливостью",
         "url1": ".././src/usersImages/enjoycamp/01_enjoycamp.jpg",
-        "like": 234
+        "like": 234,
+        "coment":[{
+            "name": "Nikita",
+            "coment":"Классная фотка"
+        },{
+            "name": "Alex",
+            "coment":"You're Beautiful"
+        },{
+            "name": "Lena",
+            "coment":"круто"
+        }]
     },
     {
         "id": "2",
@@ -18,7 +28,8 @@
         "country": "USA",
         "city": "Boston",
         "LifeСredo": "Enjoy every moment",
-        "like": 23
+        "like": 23,
+        "coment":["Классная фотка"]
         
     },
     {
@@ -29,7 +40,8 @@
         "country": "Russian",
         "city": "Moscow",
         "LifeСredo": "Нельзя брать прошлое с собой. И нельзя оглядываться,это утомляет и ведёт к гибели.",
-        "like": 112
+        "like": 112,
+        "coment":["Классная фотка"]
     },
     {
         "id": "4",
@@ -39,7 +51,8 @@
         "country": "Greece",
         "city": "Athens",
         "LifeСredo": "Follow your heart",
-        "like": 2354
+        "like": 2354,
+        "coment":["Классная фотка"]
     },
     {
         "id": "5",
@@ -49,7 +62,8 @@
         "country": "Belarus",
         "city": "Minsk",
         "LifeСredo": "Есть желание, - тысяча способов; нет желания, - тысяча поводов!",
-        "like": 568
+        "like": 568,
+        "coment":["Классная фотка"]
     },
     {
         "id": "6",
@@ -59,7 +73,8 @@
         "country": "Bulgaria",
         "city": "La Paz",
         "LifeСredo": "Любовь – самое великое безумие мужчины и женщины",
-        "like": 89
+        "like": 89,
+        "coment":["Классная фотка"]
     },
     {
         "id": "7",
@@ -69,7 +84,8 @@
         "country": "Canada",
         "city": "Ottawa",
         "LifeСredo": "Work hard. Dream big",
-        "like": 98
+        "like": 98,
+        "coment":["Классная фотка"]
     },
     {
         "id": "8",
@@ -79,7 +95,8 @@
         "country": "Egypt",
         "city": "Sharm el sheikh",
         "LifeСredo": "Money often costs too much",
-        "like": 1012
+        "like": 1012,
+        "coment":["Классная фотка"]
     },
     {
         "id": "9",
@@ -89,7 +106,8 @@
         "country": "Ukraine",
         "city": "Kiev",
         "LifeСredo": "Побороть дурные привычки легче сегодня, чем завтра",
-        "like": 2343
+        "like": 2343,
+        "coment":["Классная фотка"]
     },
     {
         "id": "10",
@@ -99,6 +117,7 @@
         "country": "Ukraine",
         "city": "Kiev",
         "LifeСredo": "Истинная жизнь человека - та, о которой он даже не подозревает",
-        "like": 231
+        "like": 231,
+        "coment":["Классная фотка"]
     }
 ]
