@@ -1,21 +1,12 @@
 import React, { useEffect } from 'react';
-//import AppRoutes from '../../routes/AppRoutes';
-import { fetchUsers, updateCardsStore } from "../../store/actions"
+import { fetchUsers, updateCardsStore } from "../../store/actions";
 import { useDispatch, useSelector } from 'react-redux';
-import { getCards } from '../../store/selectors'
-//import ModalList from '../../components/ModalList/Index';
-import "./style.scss"
-import AppRoutes from "../../routes/AppRoutes"
-import Header from "../../components/Header/Header"
-
+import { getCards } from '../../store/selectors';
+import "./style.scss";
+import AppRoutes from "../../routes/AppRoutes";
+import Header from "../../components/Header/Header";
 import NoFriendsCards from '../../components/NoFriendsCards/NoFriendsCards';
 import FriendsCards from '../../components/FriendsCards/FriendsCards';
-import NoFriendCard from '../../components/NoFriendCard/NoFriendCard';
-import FriendCard from '../../components/FriendCard/FriendCard';
-
-
-
-
 
 
 
@@ -74,16 +65,13 @@ const Main = () => {
         <div >
         <Header/>
             <div className="container-main">
-            <div class="split left">
-                <div class="centered">
+            <div className="left">
                   <AppRoutes
-             toggleAdded={toggleAdded} 
-             toggleFavorite={toggleFavorite}
-            cards={cards} />
-                 </div>
+                   toggleAdded={toggleAdded} 
+                   toggleFavorite={toggleFavorite}
+                   cards={cards} />
              </div>
-
-            <div class="split right">
+             <div className="right">
                 <div className="firstFrendsWindow">             
                   <FriendsCards cards={cards}
                   toggleAdded={toggleAdded} 
@@ -93,10 +81,10 @@ const Main = () => {
                  <NoFriendsCards cards={cards}
                   toggleAdded={toggleAdded} 
                   toggleFavorite={toggleFavorite}/>
-                 </div>
+                </div>
             </div>  
         </div>
-        </div>        
+     </div>        
     )
 }
 

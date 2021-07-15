@@ -2,8 +2,6 @@ import React from 'react';
 import FriendCard from '../FriendCard/FriendCard';
 import "./style.scss"
 
-//import Product from '../../components/Product/Product';
-
 
 const FriendsCards = (props) => {
 
@@ -27,7 +25,6 @@ const FriendsCards = (props) => {
                     }
             </ul>
         </div>
-
     )
 }
 

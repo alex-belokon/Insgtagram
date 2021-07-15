@@ -7,7 +7,9 @@
         "country": "Ukraine",
         "city": "Kiev",
         "LifeСredo": "Добром нужно платить на добро,а на зло нужно платить справедливостью",
-        "url1": ".././src/usersImages/enjoycamp/01_enjoycamp.jpg"
+        "url1": ".././src/usersImages/enjoycamp/01_enjoycamp.jpg",
+        "like": 234,
+        "values":[]
     },
     {
         "id": "2",
@@ -16,7 +18,9 @@
         "url": "./usersImages/floydmayweather/01_floydmayweather.jpg",
         "country": "USA",
         "city": "Boston",
-        "LifeСredo": "Enjoy every moment"
+        "LifeСredo": "Enjoy every moment",
+        "like": 23,
+        "values":""
         
     },
     {
@@ -26,7 +30,9 @@
         "url": "./usersImages/katerinakhaidukova/01_katerinakhaidukova.jpg",
         "country": "Russian",
         "city": "Moscow",
-        "LifeСredo": "Нельзя брать прошлое с собой. И нельзя оглядываться,это утомляет и ведёт к гибели."
+        "LifeСredo": "Нельзя брать прошлое с собой. И нельзя оглядываться,это утомляет и ведёт к гибели.",
+        "like": 112,
+        "values":""
     },
     {
         "id": "4",
@@ -35,7 +41,9 @@
         "url": "./usersImages/mendel044/01_mendel044.jpg",
         "country": "Greece",
         "city": "Athens",
-        "LifeСredo": "Follow your heart"
+        "LifeСredo": "Follow your heart",
+        "like": 2354,
+        "values":""
     },
     {
         "id": "5",
@@ -44,7 +52,9 @@
         "url": "./usersImages/mr.benytskyi/01_mr.benytskyi.jpg",
         "country": "Belarus",
         "city": "Minsk",
-        "LifeСredo": "Есть желание, - тысяча способов; нет желания, - тысяча поводов!"
+        "LifeСredo": "Есть желание, - тысяча способов; нет желания, - тысяча поводов!",
+        "like": 568,
+        "values":""
     },
     {
         "id": "6",
@@ -53,7 +63,9 @@
         "url": "./usersImages/pechivo/01_pechivo.jpg",
         "country": "Bulgaria",
         "city": "La Paz",
-        "LifeСredo": "Любовь – самое великое безумие мужчины и женщины"
+        "LifeСredo": "Любовь – самое великое безумие мужчины и женщины",
+        "like": 89,
+        "values":""
     },
     {
         "id": "7",
@@ -62,7 +74,9 @@
         "url": "./usersImages/pim_wessels/01_pim_wessels.jpg",
         "country": "Canada",
         "city": "Ottawa",
-        "LifeСredo": "Work hard. Dream big"
+        "LifeСredo": "Work hard. Dream big",
+        "like": 98,
+        "values":""
     },
     {
         "id": "8",
@@ -71,7 +85,9 @@
         "url": "./usersImages/tessabrooks/01_tessabrooks.jpg",
         "country": "Egypt",
         "city": "Sharm el sheikh",
-        "LifeСredo": "Money often costs too much"
+        "LifeСredo": "Money often costs too much",
+        "like": 1012,
+        "values":""
     },
     {
         "id": "9",
@@ -80,7 +96,9 @@
         "url": "./usersImages/yulia_akimenkooo/01_yulia_akimenkooo.jpg",
         "country": "Ukraine",
         "city": "Kiev",
-        "LifeСredo": "Побороть дурные привычки легче сегодня, чем завтра"
+        "LifeСredo": "Побороть дурные привычки легче сегодня, чем завтра",
+        "like": 2343,
+        "values":""
     },
     {
         "id": "10",
@@ -89,6 +107,8 @@
         "url": "./usersImages/zaharchuk_u/01_zaharchuk_u.jpg",
         "country": "Ukraine",
         "city": "Kiev",
-        "LifeСredo": "Истинная жизнь человека - та, о которой он даже не подозревает"
+        "LifeСredo": "Истинная жизнь человека - та, о которой он даже не подозревает",
+        "like": 231,
+        "values":""
     }
 ]

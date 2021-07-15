@@ -10,7 +10,7 @@ const Header = () => {
   <div className="header">
      <div className="container-block">   
        <div>
-          <img img src={logo} alt={"logo"} className="logo" />
+          <img src={logo} alt={"logo"} className="logo" />
           </div>
         <div className="container-icons">
           <Icon type="home"
@@ -26,7 +26,7 @@ const Header = () => {
             color="#333333"
             className="icon-heart icon" />
             <div className="user">
-              <img src={LogoUser} alt="user" className="user-logo"/>
+              <img src={LogoUser}  className="user-logo" alt="user-logo"/>
             </div>
         </div>         
     </div>
