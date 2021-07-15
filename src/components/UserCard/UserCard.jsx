@@ -1,17 +1,14 @@
 import React from 'react';
-import Coments from '../Coments/Coment';
-import Formik from "../Formik/Formik"
-//import { useDispatch } from 'react-redux';
-//import { modalFirstOpen, vendorCodePrime } from '../../store/actions';
 import Icon from "../Icon/Icon"
 import "./style.scss"
+import FormikSignup from "../Forma/FormikSignup"
 
 
 
 
 
 const UserCard = (props) => {
-    const { name, url,  isInfavorite, id, toggleFavorite, LifeСredo,coment, autorcoment} = props
+    const { name, url,  isInfavorite, id, toggleFavorite, LifeСredo, cards} = props
 
     return (
         <li className="container-card">
@@ -52,11 +49,10 @@ const UserCard = (props) => {
                     className="save-class"
                 />
             </div>
-            {coment}
-        {autorcoment}
             </div>
-            <Coments />
-            <Formik/>
+            
+            <FormikSignup id={id} cards={cards}/>
+            
           
                 {/* <div className="album__btn-add">
                     {!added ?

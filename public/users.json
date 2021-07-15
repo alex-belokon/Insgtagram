@@ -9,16 +9,7 @@
         "LifeСredo": "Добром нужно платить на добро,а на зло нужно платить справедливостью",
         "url1": ".././src/usersImages/enjoycamp/01_enjoycamp.jpg",
         "like": 234,
-        "coment":[{
-            "name": "Nikita",
-            "coment":"Классная фотка"
-        },{
-            "name": "Alex",
-            "coment":"You're Beautiful"
-        },{
-            "name": "Lena",
-            "coment":"круто"
-        }]
+        "values":[]
     },
     {
         "id": "2",
@@ -29,7 +20,7 @@
         "city": "Boston",
         "LifeСredo": "Enjoy every moment",
         "like": 23,
-        "coment":["Классная фотка"]
+        "values":""
         
     },
     {
@@ -41,7 +32,7 @@
         "city": "Moscow",
         "LifeСredo": "Нельзя брать прошлое с собой. И нельзя оглядываться,это утомляет и ведёт к гибели.",
         "like": 112,
-        "coment":["Классная фотка"]
+        "values":""
     },
     {
         "id": "4",
@@ -52,7 +43,7 @@
         "city": "Athens",
         "LifeСredo": "Follow your heart",
         "like": 2354,
-        "coment":["Классная фотка"]
+        "values":""
     },
     {
         "id": "5",
@@ -63,7 +54,7 @@
         "city": "Minsk",
         "LifeСredo": "Есть желание, - тысяча способов; нет желания, - тысяча поводов!",
         "like": 568,
-        "coment":["Классная фотка"]
+        "values":""
     },
     {
         "id": "6",
@@ -74,7 +65,7 @@
         "city": "La Paz",
         "LifeСredo": "Любовь – самое великое безумие мужчины и женщины",
         "like": 89,
-        "coment":["Классная фотка"]
+        "values":""
     },
     {
         "id": "7",
@@ -85,7 +76,7 @@
         "city": "Ottawa",
         "LifeСredo": "Work hard. Dream big",
         "like": 98,
-        "coment":["Классная фотка"]
+        "values":""
     },
     {
         "id": "8",
@@ -96,7 +87,7 @@
         "city": "Sharm el sheikh",
         "LifeСredo": "Money often costs too much",
         "like": 1012,
-        "coment":["Классная фотка"]
+        "values":""
     },
     {
         "id": "9",
@@ -107,7 +98,7 @@
         "city": "Kiev",
         "LifeСredo": "Побороть дурные привычки легче сегодня, чем завтра",
         "like": 2343,
-        "coment":["Классная фотка"]
+        "values":""
     },
     {
         "id": "10",
@@ -118,6 +109,6 @@
         "city": "Kiev",
         "LifeСredo": "Истинная жизнь человека - та, о которой он даже не подозревает",
         "like": 231,
-        "coment":["Классная фотка"]
+        "values":""
     }
 ]

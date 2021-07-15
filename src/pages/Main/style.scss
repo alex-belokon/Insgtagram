@@ -17,3 +17,8 @@
   margin-left: 20px;
   overflow-y: scroll;
 }
+.right{
+  position: -webkit-sticky;
+position: sticky;
+top: 20px;
+}

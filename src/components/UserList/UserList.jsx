@@ -10,8 +10,8 @@ const UserList = (props) => {
                 <ul className="albums__title-container">
                     {cards.map(userCards =>
                         <UserCard
-                            coment={userCards.coment.map(comentUser=> comentUser.coment)}
-                            autorcoment={userCards.coment.map(comentUser=> comentUser.name)}
+                            // coment={userCards.coment.map(comentUser=> comentUser.coment)}
+                            // autorcoment={userCards.coment.map(comentUser=> comentUser.name)}
                             cards={cards}   
                             name={userCards.name}
                             age={userCards.age}

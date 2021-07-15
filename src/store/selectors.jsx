@@ -4,7 +4,7 @@ export const getIsFormOpen = state => state.isFormOpen
 export const vendor = state => state.vendorCode
 export const getCards = state => state.cards
 
-export const getName = state => state.values.name
+export const getComent = state => state.values
 export const getSurname = state => state.values.surname
 export const getAge = state => state.values.age
 export const getDelivery = state => state.values.delivery
