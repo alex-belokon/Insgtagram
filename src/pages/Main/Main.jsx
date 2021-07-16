@@ -77,8 +77,9 @@ const Main = () => {
                   toggleAdded={toggleAdded} 
                   toggleFavorite={toggleFavorite}/>
                  </div>
-                 <div>
-                 <NoFriendsCards cards={cards}
+                 <div className="twoFrendsWindow">
+                 <NoFriendsCards   
+                  cards={cards}
                   toggleAdded={toggleAdded} 
                   toggleFavorite={toggleFavorite}/>
                 </div>

@@ -15,22 +15,22 @@ const Header = () => {
         <div className="container-icons">
           <Icon type="home"
             color="#333333"
-            className="icon-home icon" />
+            className="icon-home icon-header" />
           <Icon type="arrow"
             color="#333333"
-            className="icon-arrow icon" />
+            className="icon-arrow icon-header" />
           <Icon type="compass"
             color="#333333"
-            className="icon-compass icon" />
+            className="icon-compass icon-header" />
           <Icon type="heart"
             color="#333333"
-            className="icon-heart icon" />
+            className="icon-heart icon-header" />
             <div className="user">
               <img src={LogoUser}  className="user-logo" alt="user-logo"/>
             </div>
         </div>         
     </div>
-    </div>
+  </div>
   
   )
 }

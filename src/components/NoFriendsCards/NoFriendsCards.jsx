@@ -11,6 +11,7 @@ const NoFriendsCards = (props) => {
 
     return (    
             <ul className="NoFriendContainer" >
+                <p className="recomended">Рекомендации для вас</p>
                     {cards
                         .filter(el => !el.added)
                         .map(el => <NoFriendCard

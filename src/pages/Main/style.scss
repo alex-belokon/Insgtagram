@@ -10,14 +10,21 @@
   width: 100%;
 }
 
+.right .firstFrendsWindow {
+  position: fixed;
+  top: 430px;
+  transform: translateX(10%);
+}
+.right .twoFrendsWindow {
+  position: fixed;
+  top: 16vh;
+  height: 200px;
+  transform: translateX(10%);
+}
+
 .FriendContainer {
-  width: 200px;
+  width: 250px;
   height: 200px;
   background-color: rgb(215, 230, 173);
-  margin-left: 20px;
   overflow-y: scroll;
-}
-.right{
-  position: fixed;
-  top: 20px;
 }

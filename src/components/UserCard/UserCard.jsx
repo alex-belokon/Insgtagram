@@ -21,12 +21,17 @@ const UserCard = (props) => {
                     <p className="title-card__life-credo">{LifeСredo}</p>
                 </div>
             </div>
-            
-            <img className="album__image" src={url.toString()} alt={name} />  
+           <div className="contaiber-img">
+              <img 
+              className="album__image" 
+              src={url.toString()} 
+              alt={name} 
+              onDoubleClick={() => toggleFavorite(id)}
+              />  
+            </div>
         <div className="icons-box">
             <div className="icons-container">
                <Icon
-                    onClick={() => toggleFavorite(id)}
                     color={isInfavorite ? "red" : "white"}
                     type="heart"
                     className="star-class"
