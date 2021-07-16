@@ -3,14 +3,16 @@ import './style.scss';
 import logo from "./logo.png"
 import Icon from '../Icon/Icon';
 import LogoUser from "./07_yulia_akimenkooo.jpg"
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
   return (
   <div className="header">
      <div className="container-block">   
-       <div>
+       <div><Link to="/">
           <img src={logo} alt={"logo"} className="logo" />
+          </Link>
           </div>
         <div className="container-icons">
           <Icon type="home"

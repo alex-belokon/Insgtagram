@@ -15,10 +15,8 @@ function App() {
                 <Switch>
                     <Route path={ROUTES.LOGIN} component={Login} />
                     <Route path={ROUTES.SIGN_UP} component={SignUp} />
-                    <Route exact path='/' render={() =><h1>Home</h1>}/>
-                    <Route exact path='/exp' render={() =><h1>Exp</h1>}/>
-                    
-                    
+                    {/* <Route exact path='/' render={() =><h1>Home</h1>}/> */}
+                    {/* <Route exact path='/exp' render={() =><h1>Exp</h1>}/> */}            
                     <Main/>
                 </Switch>
             </Suspense>

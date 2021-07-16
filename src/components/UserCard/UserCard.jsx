@@ -2,6 +2,8 @@ import React from 'react';
 import Icon from "../Icon/Icon"
 import "./style.scss"
 import FormikSignup from "../Forma/FormikSignup"
+import { Link} from 'react-router-dom';
+
 
 
 
@@ -12,15 +14,15 @@ const UserCard = (props) => {
 
     return (
         <li className="container-card">
+            <Link to={name}>
             <div className="title-card">
-               
-                  <img  className= "title-card__photo-small"src={url.toString()} alt={name} />
-                
+                  <img  className= "title-card__photo-small"src={url.toString()} alt={name} />     
                 <div className="title-card__title-container">
                     <h2 className="title-card__name">{name}</h2>
                     <p className="title-card__life-credo">{LifeСredo}</p>
                 </div>
             </div>
+            </Link>
            <div className="contaiber-img">
               <img 
               className="album__image" 
