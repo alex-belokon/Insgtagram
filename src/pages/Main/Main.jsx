@@ -9,6 +9,10 @@ import NoFriendsCards from '../../components/NoFriendsCards/NoFriendsCards';
 import FriendsCards from '../../components/FriendsCards/FriendsCards';
 
 
+import { Redirect, Route, Switch } from 'react-router-dom'
+import PagesUser from '../PageUser/PageUser';
+import Page404 from '../../components/Page404/Page404'
+
 
 const Main = () => {
 
@@ -62,30 +66,47 @@ const Main = () => {
 
 
     return (
-        <div >
-        <Header/>
-            <div className="container-main">
-            <div className="left">
-                  <AppRoutes
-                   toggleAdded={toggleAdded} 
-                   toggleFavorite={toggleFavorite}
-                   cards={cards} />
-             </div>
-             <div className="right">
-                <div className="firstFrendsWindow">             
-                  <FriendsCards cards={cards}
-                  toggleAdded={toggleAdded} 
-                  toggleFavorite={toggleFavorite}/>
-                 </div>
-                 <div className="twoFrendsWindow">
-                 <NoFriendsCards   
-                  cards={cards}
-                  toggleAdded={toggleAdded} 
-                  toggleFavorite={toggleFavorite}/>
+        < >
+        <Switch>
+            <Redirect exact from="/" to="home" />
+                <Route exact path="/home" render={(routerProps) =>
+                <>
+                    <Header/>
+                    <div className="container-main">
+                    <div className="left">
+                          <AppRoutes
+                           toggleAdded={toggleAdded} 
+                           toggleFavorite={toggleFavorite}
+                           cards={cards} />
+                     </div>
+                     <div className="right">
+                        <div className="firstFrendsWindow">             
+                          <FriendsCards cards={cards}
+                          toggleAdded={toggleAdded} 
+                          toggleFavorite={toggleFavorite}/>
+                         </div>
+                         <div className="twoFrendsWindow">
+                         <NoFriendsCards   
+                          cards={cards}
+                          toggleAdded={toggleAdded} 
+                          toggleFavorite={toggleFavorite}/>
+                        </div>
+                    </div>  
                 </div>
-            </div>  
-        </div>
-     </div>        
+                </> 
+                }
+                />
+                <Route exact path="/:userId" 
+                   render={(routerProps) =>
+                    
+                     <PagesUser
+                     toggleAdded={toggleAdded} 
+                     toggleFavorite={toggleFavorite}
+                    {...routerProps}
+                />} />
+                <Route path="*" component={Page404} />
+            </Switch>
+     </>        
     )
 }
 
