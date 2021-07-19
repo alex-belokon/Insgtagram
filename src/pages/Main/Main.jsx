@@ -60,6 +60,15 @@ const Main = () => {
         addedLocalStorage(id)
         dispatch(updateCardsStore(newArray))
     }
+    const toggleIsOpenModal = (id) => {
+        const newArray = cards.map(el => {
+            if (el.id === id) {
+                el.isOpenModal = !el.isOpenModal
+            }
+            return el
+        })
+        dispatch(updateCardsStore(newArray))
+    }
 
 
 
@@ -97,9 +106,9 @@ const Main = () => {
                 }
                 />
                 <Route exact path="/:userId" 
-                   render={(routerProps) =>
-                    
+                   render={(routerProps) =>      
                      <PagesUser
+                     toggleIsOpenModal={toggleIsOpenModal}
                      toggleAdded={toggleAdded} 
                      toggleFavorite={toggleFavorite}
                     {...routerProps}

@@ -11,25 +11,20 @@ const PagesUser = (props) => {
     const {userId} = params
     const cards = useSelector(getCards)
     const result = cards.filter(x => x.name===userId)
-  
-
-   
-    const {toggleAdded,toggleFavorite} = props
-    return (
-        
+    const {toggleAdded, toggleFavorite, toggleIsOpenModal} = props
+    return (      
         <div >
             <Header/>
             {
                 result
                 .map(el => <User
+                 key={el.id}
                  name={el.name}             
                  id={el.id}        
                  age={el.age}
-                 
                  country={el.country}
                  city={el.city}
                  lifeСredo={el.LifeСredo}
-                 like={el.like}
                  added={el.added}
                  toggleAdded={toggleAdded}
                  toggleFavorite={toggleFavorite}
@@ -42,12 +37,36 @@ const PagesUser = (props) => {
                  url7={el.url7}
                  url8={el.url8}
                  url9={el.url9}
-                 url10={el.url10}          
-                >
-                </User>
-                    
+                 url10={el.url10}
+
+                 urllike={el.urllike}
+                 url2like={el.url2like}
+                 url3like={el.url3like}
+                 url4like={el.url4like}
+                 url5like={el.url5like}
+                 url6like={el.url6like}
+                 url7like={el.url7like}
+                 url8like={el.url8like}
+                 url9like={el.url9like}
+                 url10like={el.url10like}
+
+                 urlcoment={el.urlcoment}
+                 url2coment={el.url2coment}
+                 url3coment={el.url3coment}
+                 url4coment={el.url4coment}
+                 url5coment={el.url5coment}
+                 url6coment={el.url6coment}
+                 url7coment={el.url7coment}
+                 url8coment={el.url8coment}
+                 url9coment={el.url9coment}
+                 url10coment={el.url10coment}
+
+                 isOpenModal={el.isOpenModal}
+                 toggleIsOpenModal={toggleIsOpenModal}
+                >                   
+                </User>                   
                     )
-            }          
+            }        
         </div>
     )
 }

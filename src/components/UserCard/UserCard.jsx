@@ -23,7 +23,7 @@ const UserCard = (props) => {
                 </div>
             </div>
             </Link>
-           <div className="contaiber-img">
+           <div className="container-img">
               <img 
               className="album__image" 
               src={url.toString()} 

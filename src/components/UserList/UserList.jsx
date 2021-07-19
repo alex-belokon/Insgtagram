@@ -21,9 +21,9 @@ const UserList = (props) => {
                             toggleFavorite={toggleFavorite}
                             className="album__content"
                             key={userCards.id.toString()}
-                            url={userCards.url}
                             id={userCards.id}
                             isInfavorite={userCards.isInfavorite}
+                            url={userCards.url}
                         >
                         </UserCard>)}
                 </ul>

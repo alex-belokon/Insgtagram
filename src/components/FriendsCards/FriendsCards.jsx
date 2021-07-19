@@ -40,7 +40,7 @@ const FriendsCards = (props) => {
                     <div className="foot-container">
                     <p className="foot">Информация Помощь Пресса API Вакансии</p>
                     <p className="foot" >Конфиденциальность Условия Места</p>
-                    <p className="foot">Популярные аккаунты ХэштегиЯзык</p>
+                    <p className="foot">Популярные аккаунты Хэштеги Язык</p>
                     </div>
             </ul>
         </div>
