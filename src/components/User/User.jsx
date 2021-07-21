@@ -8,6 +8,7 @@ import "./User.scss"
 
 
 
+
 const User = (props) => {
 
   const [like, setLike] = useState("")
@@ -368,11 +369,14 @@ const toggle10 = (url10) => {
             </div>
             {isOpenModal && 
             <Modal
+            name={name}
             id={id}
             toggleIsOpenModal={toggleIsOpenModal}
             like={like}
             coment={coment}
             urlImage={urlImage}
+            url={url}
+            country={country} 
             /> }           
         </div>
     )
