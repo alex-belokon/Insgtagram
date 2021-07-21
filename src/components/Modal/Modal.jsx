@@ -8,9 +8,11 @@ const Modal = (props) => {
   const {id, toggleIsOpenModal, coment, urlImage, url, country, name} = props
  
   const template = coment.map(item => <span>item</span>)
-  console.log(coment);
   
-  console.log(template);
+  console.log("coment", coment);
+  console.log("template", template);
+
+
   return (
     <div className="modalOverlay" onClick={() => toggleIsOpenModal(id)}>
       <div className="modalwindow">
@@ -28,9 +30,10 @@ const Modal = (props) => {
                 </div>
           <div>
             {coment.map( item => (
+              
        <li className="message-container">
          <div >
-             <Link to={item.autor} className="icon-cont">
+             <Link to={item.autor} key={item.id} className="icon-cont">
                 <img src={item.urlUser} alt={item.autor}className="icon-c"/>
                 <h2>{item.autor}</h2>
                 </Link>
