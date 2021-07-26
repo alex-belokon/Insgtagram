@@ -1,9 +1,5 @@
 
-console.log("Код выполняется");
 const { MongoClient } = require("mongodb");
-const bson = require('bson');
-console.log("bson", bson);
-
 
 
 const client = new MongoClient("mongodb+srv://instagram1:instagram1@cluster0.dew7w.mongodb.net/test")
@@ -17,13 +13,14 @@ const start = async () => {
         await client.connect()
         console.log(client);
         console.log("Соединение установлено");
-        const db = client.db('instagram1')
-        users = db.createCollection('users')
-        console.log(users);
-
-
-    } catch (e) {
-        console.log("Ошибка", e);
-    }
+       
+        await client.db().createCollection('users')
+        const users = client.db().collection('users')
+        await users.insertOne({name:"vasiliy", age:21})
+        const user = await users.findOne({name: "vasiliy"})
+        console.log(user);
+}catch (e) {
+    console.log("Ошибка", e);
+}
 }
 start()
