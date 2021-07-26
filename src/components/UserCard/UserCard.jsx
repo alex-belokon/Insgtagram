@@ -56,22 +56,8 @@ const UserCard = (props) => {
                     className="save-class"
                 />
             </div>
-            </div>
-            
+            </div>           
             <FormikSignup id={id} cards={cards}/>
-            
-          
-                {/* <div className="album__btn-add">
-                    {!added ?
-                        <Button onClick={modalFirstOpenWindow} />
-                        :
-                        <Icon
-                            type="cart"
-                            className="album__cart"
-                        />
-                    }
-                </div> */}
-            
         </li>
     )
 }
