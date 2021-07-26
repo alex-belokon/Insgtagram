@@ -7,11 +7,13 @@ import AppRoutes from "../../routes/AppRoutes";
 import Header from "../../components/Header/Header";
 import NoFriendsCards from '../../components/NoFriendsCards/NoFriendsCards';
 import FriendsCards from '../../components/FriendsCards/FriendsCards';
-
+import PostForm from "../../components/PostForm/PostForm"
 
 import { Redirect, Route, Switch } from 'react-router-dom'
 import PagesUser from '../PageUser/PageUser';
-import Page404 from '../../components/Page404/Page404'
+import Page404 from '../../components/Page404/Page404';
+
+
 
 
 const Main = () => {
@@ -81,8 +83,10 @@ const Main = () => {
                 <Route exact path="/home" render={(routerProps) =>
                 <>
                     <Header/>
+                    <PostForm/>
                     <div className="container-main">
                     <div className="left">
+                        
                           <AppRoutes
                            toggleAdded={toggleAdded} 
                            toggleFavorite={toggleFavorite}

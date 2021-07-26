@@ -6,12 +6,19 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "aws4": "^1.11.0",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
     "date-fns": "^2.22.1",
     "firebase": "^8.6.8",
     "formik": "^2.2.9",
+<<<<<<< HEAD
     "mongodb": "^4.0.1",
+=======
+    "kerberos": "^1.1.6",
+    "mongodb": "^4.0.1",
+    "mongodb-client-encryption": "^1.2.6",
+>>>>>>> cc5ee78a5c04a487a1eb10bfbcabfa0eb0773bf3
     "postcss": "^8.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
