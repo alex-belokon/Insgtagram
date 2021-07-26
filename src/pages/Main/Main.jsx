@@ -11,7 +11,9 @@ import PostForm from "../../components/PostForm/PostForm"
 
 import { Redirect, Route, Switch } from 'react-router-dom'
 import PagesUser from '../PageUser/PageUser';
-import Page404 from '../../components/Page404/Page404'
+import Page404 from '../../components/Page404/Page404';
+
+
 
 
 const Main = () => {
@@ -84,6 +86,7 @@ const Main = () => {
                     <PostForm/>
                     <div className="container-main">
                     <div className="left">
+                        
                           <AppRoutes
                            toggleAdded={toggleAdded} 
                            toggleFavorite={toggleFavorite}
