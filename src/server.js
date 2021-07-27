@@ -17,7 +17,7 @@ const start = async () => {
         await client.db().createCollection('users')
         const users = client.db().collection('users')
         await users.insertOne({name:"vasiliy", age:21})
-        const user = await users.findOne({name: "vasiliy"})
+        const user = await users.findOne({name: "vasiliy", age:25})
         console.log(user);
 }catch (e) {
     console.log("Ошибка", e);
