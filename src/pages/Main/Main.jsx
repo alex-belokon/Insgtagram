@@ -1,129 +1,128 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { fetchUsers, updateCardsStore } from "../../store/actions";
-import { useDispatch, useSelector } from 'react-redux';
-import { getCards } from '../../store/selectors';
+import { useDispatch, useSelector } from "react-redux";
+import { getCards } from "../../store/selectors";
 import "./style.scss";
 import AppRoutes from "../../routes/AppRoutes";
 import Header from "../../components/Header/Header";
-import NoFriendsCards from '../../components/NoFriendsCards/NoFriendsCards';
-import FriendsCards from '../../components/FriendsCards/FriendsCards';
-import PostForm from "../../components/PostForm/PostForm"
-
-import { Redirect, Route, Switch } from 'react-router-dom'
-import PagesUser from '../PageUser/PageUser';
-import Page404 from '../../components/Page404/Page404';
-
-
-
+import NoFriendsCards from "../../components/NoFriendsCards/NoFriendsCards";
+import FriendsCards from "../../components/FriendsCards/FriendsCards";
+import { Redirect, Route, Switch } from "react-router-dom";
+import PagesUser from "../PageUser/PageUser";
+import Page404 from "../../components/Page404/Page404";
 
 const Main = () => {
+  const dispatch = useDispatch();
+  const cards = useSelector(getCards);
 
-    const dispatch = useDispatch()
-    const cards = useSelector(getCards)
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
 
-    useEffect(() => {
-        dispatch(fetchUsers())
-    }, [dispatch])
+  const favoriteLocalStorage = (id) => {
+    let array = JSON.parse(localStorage.getItem("favorites")) || [];
+    array = array.includes(id)
+      ? array.filter((el) => el !== id)
+      : array.concat(id);
+    const favorites = JSON.stringify(array);
+    localStorage.setItem("favorites", favorites);
+  };
 
-    const favoriteLocalStorage = (id) => {
-        let array = JSON.parse(localStorage.getItem('favorites')) || []
-        array = (array.includes(id) ? array.filter(el => el !== id) : array.concat(id))
-        const favorites = JSON.stringify(array)
-        localStorage.setItem('favorites', favorites)
-    }
+  const toggleFavorite = (id) => {
+    const newArray = cards.map((el) => {
+      if (el.id === id) {
+        el.isInfavorite = !el.isInfavorite;
+      }
+      return el;
+    });
+    favoriteLocalStorage(id);
+    dispatch(updateCardsStore(newArray));
+  };
 
-    const toggleFavorite = (id) => {
-        const newArray = cards.map(el => {
-            if (el.id === id) {
-                el.isInfavorite = !el.isInfavorite
-            }
-            return el
-        })
-        favoriteLocalStorage(id)
-        dispatch(updateCardsStore(newArray))
+  const addedLocalStorage = (id) => {
+    let array = JSON.parse(localStorage.getItem("added")) || [];
+    array = array.includes(id)
+      ? array.filter((el) => el !== id)
+      : array.concat(id);
+    const added = JSON.stringify(array);
+    localStorage.setItem("added", added);
+  };
 
-    }
+  const toggleAdded = (id) => {
+    const newArray = cards.map((el) => {
+      if (el.id === id) {
+        el.added = !el.added;
+      }
+      return el;
+    });
 
-    const addedLocalStorage = (id) => {
-        let array = JSON.parse(localStorage.getItem('added')) || []
-        array = (array.includes(id) ? array.filter(el => el !== id) : array.concat(id))
-        const added = JSON.stringify(array)
-        localStorage.setItem('added', added)
-    }
+    addedLocalStorage(id);
+    dispatch(updateCardsStore(newArray));
+  };
+  const toggleIsOpenModal = (id) => {
+    const newArray = cards.map((el) => {
+      if (el.id === id) {
+        el.isOpenModal = !el.isOpenModal;
+      }
+      return el;
+    });
+    dispatch(updateCardsStore(newArray));
+  };
 
-    const toggleAdded = (id) => {
-        const newArray = cards.map(el => {
-            if (el.id === id) {
-                el.added = !el.added
-            }
-            return el
-        })
-
-        addedLocalStorage(id)
-        dispatch(updateCardsStore(newArray))
-    }
-    const toggleIsOpenModal = (id) => {
-        const newArray = cards.map(el => {
-            if (el.id === id) {
-                el.isOpenModal = !el.isOpenModal
-            }
-            return el
-        })
-        dispatch(updateCardsStore(newArray))
-    }
-
-
-
-
-
-    return (
-        < >
-        <Switch>
-            <Redirect exact from="/" to="home" />
-                <Route exact path="/home" render={(routerProps) =>
-                <>
-                    <Header/>
-                    <PostForm/>
-                    <div className="container-main">
-                    <div className="left">
-                        
-                          <AppRoutes
-                           toggleAdded={toggleAdded} 
-                           toggleFavorite={toggleFavorite}
-                           cards={cards} />
-                     </div>
-                     <div className="right">
-                        <div className="firstFrendsWindow">             
-                          <FriendsCards cards={cards}
-                          toggleAdded={toggleAdded} 
-                          toggleFavorite={toggleFavorite}/>
-                         </div>
-                         <div className="twoFrendsWindow">
-                         <NoFriendsCards   
-                          cards={cards}
-                          toggleAdded={toggleAdded} 
-                          toggleFavorite={toggleFavorite}/>
-                        </div>
-                    </div>  
+  return (
+    <>
+      <Switch>
+        <Redirect exact from="/" to="home" />
+        <Route
+          exact
+          path="/home"
+          render={(routerProps) => (
+            <>
+              <Header />
+              <div className="container-main">
+                <div className="left">
+                  <AppRoutes
+                    toggleAdded={toggleAdded}
+                    toggleFavorite={toggleFavorite}
+                    cards={cards}
+                  />
                 </div>
-                </> 
-                }
-                />
-                <Route exact path="/:userId" 
-                   render={(routerProps) =>      
-                     <PagesUser
-                     toggleIsOpenModal={toggleIsOpenModal}
-                     toggleAdded={toggleAdded} 
-                     toggleFavorite={toggleFavorite}
-                    {...routerProps}
-                />} />
-                <Route path="*" component={Page404} />
-            </Switch>
-     </>        
-    )
-}
+                <div className="right">
+                  <div className="firstFrendsWindow">
+                    <FriendsCards
+                      cards={cards}
+                      toggleAdded={toggleAdded}
+                      toggleFavorite={toggleFavorite}
+                    />
+                  </div>
+                  <div className="twoFrendsWindow">
+                    <NoFriendsCards
+                      cards={cards}
+                      toggleAdded={toggleAdded}
+                      toggleFavorite={toggleFavorite}
+                    />
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        />
+        <Route
+          exact
+          path="/:userId"
+          render={(routerProps) => (
+            <PagesUser
+              toggleIsOpenModal={toggleIsOpenModal}
+              toggleAdded={toggleAdded}
+              toggleFavorite={toggleFavorite}
+              {...routerProps}
+            />
+          )}
+        />
+        <Route path="*" component={Page404} />
+      </Switch>
+    </>
+  );
+};
 
 export default Main;
-
-
-
