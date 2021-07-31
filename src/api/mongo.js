@@ -1,20 +1,20 @@
 
-db.users.update(
-    {name:"zaharchuk_u"},
-    {
-        $set: {
-            urlcoment: [
-                {autor:"tessabrooks",
-                message:"Классно выглядишь",
-                urlUser:"./usersImages/tessabrooks/01_tessabrooks.jpg"},
-                {autor:"tessabrooks",
-                message:"Классно выглядишь!!!!!!!!!!!!!!!!!!!!!!!!",
-                urlUser:"./usersImages/tessabrooks/01_tessabrooks.jpg"}
-            ]
+// db.users.update(
+//     {name:"zaharchuk_u"},
+//     {
+//         $set: {
+//             urlcoment: [
+//                 {autor:"tessabrooks",
+//                 message:"Классно выглядишь",
+//                 urlUser:"./usersImages/tessabrooks/01_tessabrooks.jpg"},
+//                 {autor:"tessabrooks",
+//                 message:"Классно выглядишь!!!!!!!!!!!!!!!!!!!!!!!!",
+//                 urlUser:"./usersImages/tessabrooks/01_tessabrooks.jpg"}
+//             ]
 
-        }
-    }
-)
+//         }
+//     }
+// )
 /// Добавили 2 поста
 
 
