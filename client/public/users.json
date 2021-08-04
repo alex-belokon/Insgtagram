@@ -1,6 +1,5 @@
 [
     {
-        "_id": "1",
         "name": "enjoycamp",
         "age": 25,
         "country": "Ukraine",
@@ -274,7 +273,6 @@
 
     },
     {
-        "_id": "2",
         "name": "floydmayweather",
         "age": 32,
         "country": "USA",
@@ -547,7 +545,6 @@
 
     },
     {
-        "_id": "3",
         "name": "katerinakhaidukova",
         "age": 23,
         "country": "Russian",
@@ -820,7 +817,6 @@
 
     },
     {
-        "_id": "4",
         "name": "mendel044",
         "age": 29,
         "country": "Greece",
@@ -1093,7 +1089,6 @@
 
     },
     {
-        "_id": "5",
         "name": "benytskyi",
         "age": 32,
         "country": "Belarus",
@@ -1366,7 +1361,6 @@
 
     },
     {
-        "_id": "6",
         "name": "pechivo",
         "age": 27,
         "country": "Bulgaria",
@@ -1639,7 +1633,6 @@
 
     },
     {
-        "_id": "7",
         "name": "pim_wessels",
         "age": 37,
         "country": "Canada",
@@ -1912,7 +1905,6 @@
 
     },
     {
-        "_id": "8",
         "name": "tessabrooks",
         "age": 30,
         "country": "Egypt",
@@ -2185,7 +2177,6 @@
 
     },
     {
-        "_id": "9",
         "name": "yulia_akimenkooo",
         "age": 28,
         "country": "Ukraine",
@@ -2458,7 +2449,6 @@
 
     },
     {
-        "_id": "10",
         "name": "zaharchuk_u",
         "age": 26,
         "country": "Ukraine",
