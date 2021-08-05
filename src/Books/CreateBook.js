@@ -19,8 +19,8 @@ class CreateBook extends Component {
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  };
 
+    const r=null
   onSubmit = e => {
     e.preventDefault();
 
