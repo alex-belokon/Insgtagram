@@ -5,16 +5,16 @@ import "./modalStyle.scss";
 
 const Modal = (props) => {
 
-  const {id, toggleIsOpenModal, coment, urlImage, url, country, name} = props
+  const {_id, toggleIsOpenModal, coment, urlImage, url, country, name} = props
  
-  const template = coment.map(item => <span>item</span>)
+  // const template = coment.map(item => <span>item</span>)
   
-  console.log("coment", coment);
-  console.log("template", template);
+  // console.log("coment", coment);
+  // console.log("template", template);
 
 
   return (
-    <div className="modalOverlay" onClick={() => toggleIsOpenModal(id)}>
+    <div className="modalOverlay" onClick={() => toggleIsOpenModal(_id)}>
       <div className="modalwindow">
         <div className="modalwindow__container">
         <div><img  className="modalwindow__img" src={urlImage} alt="user" /></div>
@@ -29,12 +29,12 @@ const Modal = (props) => {
                 </div>    
                 </div>
           <div>
-            {coment.map( item => (
-              
-       <li className="message-container">
+            {coment.map( item => (  
+                     
+       <li className="message-container" key={item._id}   >
          <div >
-             <Link to={item.autor} key={item.id} className="icon-cont">
-                <img src={item.urlUser} alt={item.autor}className="icon-c"/>
+             <Link to={item.autor} key={item._id} className="icon-cont">
+                <img src={item.urlUser} alt={item.autor} className="icon-c"/>
                 <h2>{item.autor}</h2>
                 </Link>
             </div>
@@ -53,5 +53,5 @@ const Modal = (props) => {
   )
 }
 
-export default Modal
+export default Modal;
 

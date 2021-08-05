@@ -12,9 +12,9 @@ const User = (props) => {
   const [urlImage, setUrlImage] = useState("");
   const cards = useSelector(getCards);
 
-  const urlUser = "http://localhost:3000/users.json";
+  // const urlUser = "http://localhost:3000/users.json";
 
-  console.log(urlUser, "urlUser");
+  // console.log(urlUser, "urlUser");
 
 
   // const data = { values: 5 };
@@ -43,7 +43,7 @@ const User = (props) => {
 
   const {
     name,
-    id,
+    _id,
     age,
     url,
     country,
@@ -231,7 +231,7 @@ const User = (props) => {
             <h2>{name}</h2>
             <button
               className={added ? "box__added" : "box__noadded"}
-              onClick={() => toggleAdded(id)}
+              onClick={() => toggleAdded(_id)}
             >
               {added ? "Подписан" : "Оформить подписку?"}
             </button>
@@ -254,7 +254,7 @@ const User = (props) => {
       </div>
       <div className="collection">
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -276,7 +276,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -298,7 +298,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -320,7 +320,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -342,7 +342,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -364,7 +364,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -386,7 +386,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -408,7 +408,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -430,7 +430,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -452,7 +452,7 @@ const User = (props) => {
           />
         </div>
         <div
-          onClick={() => toggleIsOpenModal(id)}
+          onClick={() => toggleIsOpenModal(_id)}
           className="collection__container"
         >
           <div className="like">
@@ -476,9 +476,9 @@ const User = (props) => {
       </div>
       {isOpenModal && (
         <Modal
-          key={id}
+          key={_id}
           name={name}
-          id={id}
+          _id={_id}
           toggleIsOpenModal={toggleIsOpenModal}
           like={like}
           coment={coment}

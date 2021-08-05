@@ -2,53 +2,32 @@ import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import Icon from "../Icon/Icon";
 import "./style.scss";
+import { Link } from "react-router-dom";
+import LogoUser from "../Header/07_yulia_akimenkooo.jpg";
 // import { useDispatch, useSelector } from 'react-redux';
 // import { udateComent, updateCardsStore } from '../../store/actions';
 // import { getComent } from '../../store/selectors';
 // import { useEffect } from 'react';
 
 const FormikSignup = (props) => {
-  // const {id, cards} = props
-  // const dispatch = useDispatch()
-  // const coment = useSelector(getComent)
+ 
   const [count, setCount] = useState("");
+
+  
 
   const handleSubmitForm = (values) => {
     const { coment } = values;
     setCount(coment);
+
     const post = {
       autor: coment,
       message: coment,
       urlUser: null,
     };
     console.log(post);
-
-    //dispatch(udateComent(coment))
   };
-  // const createPost = () => {
-  //     const post = {
-  //         autor: count,
-  //        message:count,
-  //        urlUser: null
-  //     }
+  
 
-  //     console.log(post);
-  // }
-
-  // const addComent = (id, coment) => {
-  //     const val= coment
-  //     console.log("111111", val);
-  //     const newAr=cards.map(el => {
-  //       if(el.id === id) {
-  //       el.values = `Имя пользователя:    ${val}`
-
-  //       }
-  //       return el
-
-  //     })
-
-  //     setCount(newAr)
-  //   }
 
   return (
     <div className="container-coment">
@@ -78,6 +57,9 @@ const FormikSignup = (props) => {
           );
         }}
       </Formik>
+      <Link to="/yulia_akimenkooo">
+        <img src={LogoUser} className="user-logo" alt="user-logo" />
+      </Link>
       {count}
     </div>
   );

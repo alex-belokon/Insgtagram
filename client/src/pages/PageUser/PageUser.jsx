@@ -18,9 +18,9 @@ const PagesUser = (props) => {
             {
                 result
                 .map(el => <User
-                 key={el.id}
+                 key={el._id}
                  name={el.name}             
-                 id={el.id}        
+                 _id={el._id}        
                  age={el.age}
                  country={el.country}
                  city={el.city}

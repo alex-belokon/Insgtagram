@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import { fetchUsers, updateCardsStore } from "../../store/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { getCards } from "../../store/selectors";
@@ -12,6 +12,7 @@ import PagesUser from "../PageUser/PageUser";
 import Page404 from "../../components/Page404/Page404";
 
 const Main = () => {
+
   const dispatch = useDispatch();
   const cards = useSelector(getCards);
 
@@ -19,49 +20,49 @@ const Main = () => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
-  const favoriteLocalStorage = (id) => {
+  const favoriteLocalStorage = (_id) => {
     let array = JSON.parse(localStorage.getItem("favorites")) || [];
-    array = array.includes(id)
-      ? array.filter((el) => el !== id)
-      : array.concat(id);
+    array = array.includes(_id)
+      ? array.filter((el) => el !== _id)
+      : array.concat(_id);
     const favorites = JSON.stringify(array);
     localStorage.setItem("favorites", favorites);
   };
 
-  const toggleFavorite = (id) => {
+  const toggleFavorite = (_id) => {
     const newArray = cards.map((el) => {
-      if (el.id === id) {
+      if (el._id === _id) {
         el.isInfavorite = !el.isInfavorite;
       }
       return el;
     });
-    favoriteLocalStorage(id);
+    favoriteLocalStorage(_id);
     dispatch(updateCardsStore(newArray));
   };
 
-  const addedLocalStorage = (id) => {
+  const addedLocalStorage = (_id) => {
     let array = JSON.parse(localStorage.getItem("added")) || [];
-    array = array.includes(id)
-      ? array.filter((el) => el !== id)
-      : array.concat(id);
+    array = array.includes(_id)
+      ? array.filter((el) => el !== _id)
+      : array.concat(_id);
     const added = JSON.stringify(array);
     localStorage.setItem("added", added);
   };
 
-  const toggleAdded = (id) => {
+  const toggleAdded = (_id) => {
     const newArray = cards.map((el) => {
-      if (el.id === id) {
+      if (el._id === _id) {
         el.added = !el.added;
       }
       return el;
     });
 
-    addedLocalStorage(id);
+    addedLocalStorage(_id);
     dispatch(updateCardsStore(newArray));
   };
-  const toggleIsOpenModal = (id) => {
+  const toggleIsOpenModal = (_id) => {
     const newArray = cards.map((el) => {
-      if (el.id === id) {
+      if (el._id === _id) {
         el.isOpenModal = !el.isOpenModal;
       }
       return el;

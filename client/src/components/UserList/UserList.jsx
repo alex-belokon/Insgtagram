@@ -5,7 +5,7 @@ import UserCard from '../UserCard/UserCard';
 const UserList = (props) => {
 
     const {toggleAdded, toggleFavorite, cards} =props
-    console.log(cards)
+    
     return (       
                 <ul className="albums__title-container">
                     {cards.map(userCards =>
@@ -20,8 +20,8 @@ const UserList = (props) => {
                             toggleAdded={toggleAdded}
                             toggleFavorite={toggleFavorite}
                             className="album__content"
-                            key={userCards.id}
-                            id={userCards.id}
+                            key={userCards._id}
+                            _id={userCards._id}
                             isInfavorite={userCards.isInfavorite}
                             url={userCards.url}
                         >

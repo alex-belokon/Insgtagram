@@ -12,8 +12,7 @@ export default function Login() {
 
   const [error, setError] = useState('');
   const isInvalid = password === '' || emailAddress === '';
-  console.log(emailAddress)
-  
+
   const handleLogin = async (event) => {
     event.preventDefault();
 

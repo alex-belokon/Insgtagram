@@ -30,10 +30,10 @@ const FriendsCards = (props) => {
                             toggleAdded={toggleAdded}
                             toggleFavorite={toggleFavorite}
                             added={el.added}
-                            key={el.id}
+                            key={el._id}
                             name={el.name}
                             url={el.url}
-                            id={el.id}
+                            _id={el._id}
                             isInfavorite={el.isInfavorite}
                         />)
                     }

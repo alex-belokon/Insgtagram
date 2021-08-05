@@ -2,10 +2,15 @@ import getUsersCards from "../api/getUsersCards.js";
 import { LOADING, UPDATE_CARDS, LOADED, NAME, UPDATE_COMENT } from "./types"
 
 
+
+
 export const fetchUsers = () => (dispatch) => {
 
+
+
     dispatch({ type: LOADING })
-    getUsersCards().then(res => {
+    getUsersCards()
+    .then(res => {
         const normalizeArray = normalizeData(res.data);
         dispatch({ type: UPDATE_CARDS, payload: { cards: normalizeArray } })
     })
@@ -15,8 +20,8 @@ export const fetchUsers = () => (dispatch) => {
             const favorites = JSON.parse(localStorage.getItem('favorites')) || []
             const added = JSON.parse(localStorage.getItem('added')) || []
 
-            cardPlus.isInfavorite = favorites.includes(cardPlus.id)
-            cardPlus.added = added.includes(cardPlus.id)
+            cardPlus.isInfavorite = favorites.includes(cardPlus._id)
+            cardPlus.added = added.includes(cardPlus._id)
             return cardPlus
         })
     }

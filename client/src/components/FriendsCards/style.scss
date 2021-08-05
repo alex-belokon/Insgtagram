@@ -94,12 +94,11 @@
   margin-top: 220px;
   position: absolute;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .foot {
   display: block;
-
   top: -126px;
   font-size: 11px;
   font-weight: 400;
