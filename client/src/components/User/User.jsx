@@ -7,39 +7,11 @@ import Modal from "../Modal/Modal";
 import "./User.scss";
 
 const User = (props) => {
-  const [like, setLike] = useState("");
   const [coment, setComent] = useState("");
   const [urlImage, setUrlImage] = useState("");
+  const [nameArray, setNameArray] = useState('');
   const cards = useSelector(getCards);
 
-  // const urlUser = "http://localhost:3000/users.json";
-
-  // console.log(urlUser, "urlUser");
-
-
-  // const data = { values: 5 };
-
-  // useEffect(() => {
-  //   // POST request using fetch inside useEffect React hook
-  //   const requestOptions = {
-  //       method: 'POST',
-  //       headers: { "values": "application/json" },
-  //       body: JSON.stringify(data)
-  //   };
-  //   fetch(urlUser, requestOptions)
-  //       .then(response => response.json())
-  //       .then(data => console.log(data.id));
-
-// empty dependency array means this effect will only run once (like componentDidMount in classes)
-// }, []);
-
-  // fetch('users.json')
-  // .then((response) => {
-  //   return response.json();
-  // })
-  // .then((data) => {
-  //   console.log(data);
-  // });
 
   const {
     name,
@@ -87,12 +59,14 @@ const User = (props) => {
   const toggle = (url) => {
     cards.map((el) => {
       if (el.url === url) {
-        const like = el.urllike;
         const coment = el.urlcoment;
+        const nameArray = "urlcoment"
         const urlImage = el.url;
-        setLike(like);
+      
         setComent(coment);
         setUrlImage(urlImage);
+        setNameArray(nameArray)
+      
       }
       return el;
     });
@@ -101,12 +75,15 @@ const User = (props) => {
   const toggle2 = (url2) => {
     cards.map((el) => {
       if (el.url2 === url2) {
-        const like = el.url2like;
+        
         const coment = el.url2coment;
         const urlImage = el.url2;
-        setLike(like);
+        const nameArray = "url2coment"
+     
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
+       
       }
       return el;
     });
@@ -114,12 +91,15 @@ const User = (props) => {
   const toggle3 = (url3) => {
     cards.map((el) => {
       if (el.url3 === url3) {
-        const like = el.url3like;
+        
         const coment = el.url3coment;
         const urlImage = el.url3;
-        setLike(like);
+        const nameArray = "url3coment"
+        
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
+       
       }
       return el;
     });
@@ -127,12 +107,15 @@ const User = (props) => {
   const toggle4 = (url4) => {
     cards.map((el) => {
       if (el.url4 === url4) {
-        const like = el.url4like;
+        
         const coment = el.url4coment;
         const urlImage = el.url4;
-        setLike(like);
+        const nameArray = "url4coment"
+ 
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
+    
       }
       return el;
     });
@@ -140,12 +123,15 @@ const User = (props) => {
   const toggle5 = (url5) => {
     cards.map((el) => {
       if (el.url5 === url5) {
-        const like = el.url5like;
+       
         const coment = el.url5coment;
         const urlImage = el.url5;
-        setLike(like);
+        const nameArray = "url5coment"
+   
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
+     
       }
       return el;
     });
@@ -153,10 +139,12 @@ const User = (props) => {
   const toggle6 = (url6) => {
     cards.map((el) => {
       if (el.url6 === url6) {
-        const like = el.url6like;
+       
         const coment = el.url6coment;
         const urlImage = el.url6;
-        setLike(like);
+        const nameArray = "url6coment"
+    
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
       }
@@ -167,10 +155,12 @@ const User = (props) => {
   const toggle7 = (url7) => {
     cards.map((el) => {
       if (el.url7 === url7) {
-        const like = el.url7like;
+      
         const coment = el.url7coment;
         const urlImage = el.url7;
-        setLike(like);
+        const nameArray = "url7coment"
+      
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
       }
@@ -181,12 +171,15 @@ const User = (props) => {
   const toggle8 = (url8) => {
     cards.map((el) => {
       if (el.url8 === url8) {
-        const like = el.url8like;
+       
         const coment = el.url8coment;
         const urlImage = el.url8;
-        setLike(like);
+        const nameArray = "url8coment"
+   
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
+    
       }
       return el;
     });
@@ -194,12 +187,15 @@ const User = (props) => {
   const toggle9 = (url9) => {
     cards.map((el) => {
       if (el.url9 === url9) {
-        const like = el.url9like;
+    
         const coment = el.url9coment;
         const urlImage = el.url9;
-        setLike(like);
+        const nameArray = "url9coment"
+      
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
+        
       }
       return el;
     });
@@ -207,12 +203,15 @@ const User = (props) => {
   const toggle10 = (url10) => {
     cards.map((el) => {
       if (el.url10 === url10) {
-        const like = el.url10like;
+        
         const coment = el.url10coment;
         const urlImage = el.url10;
-        setLike(like);
+        const nameArray = "url10coment"
+       
+        setNameArray(nameArray)
         setComent(coment);
         setUrlImage(urlImage);
+       
       }
       return el;
     });
@@ -480,11 +479,11 @@ const User = (props) => {
           name={name}
           _id={_id}
           toggleIsOpenModal={toggleIsOpenModal}
-          like={like}
           coment={coment}
           urlImage={urlImage}
           url={url}
           country={country}
+          nameArray={nameArray}
         />
       )}
     </div>

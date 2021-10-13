@@ -11,11 +11,11 @@ const UserCard = (props) => {
   return (
     <li className="container-card">
       <Link to={name}>
-        <div className="title-card">
-          <img className="title-card__photo-small" src={url} alt={name} />
-          <div className="title-card__title-container">
-            <h2 className="title-card__name">{name}</h2>
-            <p className="title-card__life-credo">{LifeСredo}</p>
+        <div className="title-cards">
+          <img className="title-cards__photo-small" src={url} alt={name} />
+          <div className="title-cards__title-container">
+            <h2 className="title-cards__name">{name}</h2>
+            <p className="title-cards__life-credo">{LifeСredo}</p>
           </div>
         </div>
       </Link>
@@ -41,7 +41,7 @@ const UserCard = (props) => {
           <Icon color="#333333" type="save" className="save-class" />
         </div>
       </div>
-      <FormikSignup _id={_id} cards={cards} />
+      <FormikSignup _id={_id} cards={cards} url={url} />
     </li>
   );
 };

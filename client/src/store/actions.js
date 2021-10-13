@@ -1,12 +1,10 @@
 import getUsersCards from "../api/getUsersCards.js";
-import { LOADING, UPDATE_CARDS, LOADED, NAME, UPDATE_COMENT } from "./types"
+import { LOADING, UPDATE_CARDS, LOADED, NAME, MESSAGE } from "./types"
 
 
 
 
 export const fetchUsers = () => (dispatch) => {
-
-
 
     dispatch({ type: LOADING })
     getUsersCards()
@@ -34,5 +32,5 @@ export const dataName = (data) => {
     return { type: NAME, payload: data }
 }
 export const udateComent = (data) => {
-    return {type: UPDATE_COMENT, payload: data}
+    return {type: MESSAGE, payload: data}
 }

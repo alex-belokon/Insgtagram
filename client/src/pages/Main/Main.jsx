@@ -14,11 +14,14 @@ import Page404 from "../../components/Page404/Page404";
 const Main = () => {
 
   const dispatch = useDispatch();
-  const cards = useSelector(getCards);
+ 
+  
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
+
+  const cards = useSelector(getCards);
 
   const favoriteLocalStorage = (_id) => {
     let array = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -60,7 +63,7 @@ const Main = () => {
     addedLocalStorage(_id);
     dispatch(updateCardsStore(newArray));
   };
-  const toggleIsOpenModal = (_id) => {
+  const toggleIsOpenModal = (_id,e) => {
     const newArray = cards.map((el) => {
       if (el._id === _id) {
         el.isOpenModal = !el.isOpenModal;

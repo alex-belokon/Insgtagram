@@ -12,6 +12,7 @@
   background-color: black;
   min-width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .album__image {
@@ -23,10 +24,11 @@
   opacity: 0.5;
 }
 
-.title-card {
+.title-cards {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  margin-bottom: 3px;
 
   &__name {
     margin-top: 3px;

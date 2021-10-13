@@ -1,14 +1,28 @@
 import React from "react";
 import NoFriendCard from "../NoFriendCard/NoFriendCard";
 import "./style.scss";
-
-//import Product from '../../components/Product/Product';
+import urlUser from "../Header/07_yulia_akimenkooo.jpg";
 
 const NoFriendsCards = (props) => {
   const { cards, toggleFavorite, toggleAdded } = props;
 
   return (
     <ul className="NoFriendContainer">
+      <div className="user-block">
+        <div className="title">
+          <img
+            className="title-card__photo"
+            src={urlUser.toString()}
+            alt="yulia_akimenkooo"
+          />
+          <div className="title-card__title-container">
+            <h2 className="title-card__name">"yulia_akimenkooo"</h2>
+            <p className="title-card__life-credo">
+              Побороть дурные привычки...
+            </p>
+          </div>
+        </div>
+      </div>
       <p className="recomended">Рекомендации для вас</p>
       {cards
         .filter((el) => !el.added)

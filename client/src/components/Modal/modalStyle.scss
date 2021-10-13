@@ -78,8 +78,6 @@ $color-over: rgba(0, 0, 0, 0.7);
   align-items: flex-start;
   flex-direction: column;
   margin: 15px 0 10px 12px;
-  overflow: auto;
-  overflow-y: auto;
 }
 
 .icon-c {
@@ -128,4 +126,9 @@ $color-over: rgba(0, 0, 0, 0.7);
   justify-content: flex-start;
   flex-direction: column;
   margin-left: 12px;
+}
+.message-box {
+  overflow-y: scroll;
+  max-height: 37vh;
+  margin-bottom: 5px;
 }

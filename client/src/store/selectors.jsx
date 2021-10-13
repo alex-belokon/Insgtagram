@@ -9,6 +9,7 @@ export const getSurname = state => state.values.surname
 export const getAge = state => state.values.age
 export const getDelivery = state => state.values.delivery
 export const getMobil = state => state.values.mobil
-export const getValues = state => state.values
+export const getMessage = state => state.message
+
 
 

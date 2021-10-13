@@ -1,7 +1,7 @@
 import React from 'react';
 import FriendCard from '../FriendCard/FriendCard';
 import "./style.scss"
-import urlUser from "../Header/07_yulia_akimenkooo.jpg"
+
 
 
 const FriendsCards = (props) => {
@@ -10,17 +10,6 @@ const FriendsCards = (props) => {
 
     return (
         <div className="right-block">
-            <div className="user-block">
-            <div className="title">
-               
-               <img  className= "title-card__photo"src={urlUser.toString()} alt="yulia_akimenkooo" />
-             
-             <div className="title-card__title-container">
-                 <h2 className="title-card__name">"yulia_akimenkooo"</h2>
-                 <p className="title-card__life-credo">Побороть дурные привычки...</p>
-             </div>
-         </div>
-                  </div>
             <ul className="friendContainer">
             <p className="recomended">Вы подписаны</p>
                 

@@ -2,41 +2,45 @@ import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import Icon from "../Icon/Icon";
 import "./style.scss";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import LogoUser from "../Header/07_yulia_akimenkooo.jpg";
-//import axios from "axios";
+import axios from "axios";
+
 
 const FormikSignup = (props) => {
-  //const [autorUser, setAutorUser] = useState("");
-  const [comentUser, setComentUser] = useState("");
-  //const [urlUser, setUrlUser] = useState("");
+  const {nameArray} = props
+  const [initialValues, setInitialValues] = useState("");
+
 
   const handleSubmitForm = (values) => {
-    const { coment } = values;
-    setComentUser(coment);
+ 
 
-    //   const data = {
-    //     autor: autorUser,
-    //     message: comentUser,
-    //     urlUser: urlUser,
-    //   };
+  const valuesID = props._id
 
-    //   axios
-    //     .post('http://localhost:8082/api/books', data)
-    //     .then((res) => {
-    //       setAutorUser({
-    //         autor: "autorUser",
-    //         message: "comentUser",
-    //         urlUser: "urlUser",
-    //       });
-    //       console.log(data);
-    //       props.history.push("/");
-    //     })
-    //     .catch((err) => {
-    //       console.log("Error in CreateBook!");
-    //     });
+  const data = {
+    "_id": valuesID,
+    "photo": nameArray,
+    "autor": "yulia_akimenkooo",
+    "message": values.coment,
+    "urlUser": LogoUser
+  }
+  //dispatch(udateComent(values.coment))
 
-    //   console.log(data);
+   setInitialValues(data)
+   
+      axios
+        .put('http://localhost:5000/api/users', initialValues)
+        .then((res) => {
+          console.log("Приём данных", res)
+        })
+        .catch((e) => {
+          console.log("Error in Message!");
+        });
+
+      console.log(initialValues);
+    
+      
+      
   };
 
   return (
@@ -46,8 +50,7 @@ const FormikSignup = (props) => {
         initialValues={{
           coment: "",
         }}
-        onSubmit={handleSubmitForm}
-      >
+        onSubmit={handleSubmitForm}>
         {(formikProps) => {
           return (
             <Form>
@@ -67,10 +70,6 @@ const FormikSignup = (props) => {
           );
         }}
       </Formik>
-      <Link to="/yulia_akimenkooo">
-        <img src={LogoUser} className="user-logo" alt="user-logo" />
-      </Link>
-      {comentUser}
     </div>
   );
 };

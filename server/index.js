@@ -1,29 +1,31 @@
-const express = require('express')
+import express from 'express';
+import mongoose from 'mongoose';
+import router from './router.js';
+import cors from 'cors'
+import morgan from 'morgan'
+
+
 const app = express()
 
-const mongoose = require('mongoose')
-const cors = require('cors')
-require('dotenv').config()
-const usersRouter = require('./routes/Users')
-
+app.use(morgan('dev'))
 app.use(cors())
 
-mongoose
-    .connect(require('./config/index').MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
-    .then(() => console.log('Mongo is connected successfully!'))
-    .catch((err) => console.log(err))
+const PORT = 5000;
+const DB_URL = "mongodb+srv://instagram1:instagram1@cluster0.dew7w.mongodb.net/instagram1?retryWrites=true&w=majority";
+
+app.use(express.json())
+app.use('/api', router)
 
 
-// app.get('/api', (req, res) => {
-//     res.send('<h1>Hello from node</h1>')
-// })
+async function startApp() {
+    try {
+        await mongoose.connect(DB_URL, {useUnifiedTopology:true, useNewUrlParser:true, useFindAndModify: false})
+        app.listen(PORT, () => console.log('SERVER STARTED ON PORT ' + PORT))
+    } catch (e) {
+        console.log(e);
+    }
+}
+startApp()
 
-app.use(express.json({extended: false}))
-
-app.use('/', usersRouter)
 
 
-
-const port = require('./config/index').PORT
-
-app.listen(port, () => console.log(`Server is listening on ${port}`))

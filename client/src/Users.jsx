@@ -1,8 +1,7 @@
 import React from 'react'
 
 function Users({name, url}) {
-
-    
+   
     return ( 
         <>
             <p>{name}</p>
