@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { fetchUsers, updateCardsStore } from "../../store/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { getCards } from "../../store/selectors";
@@ -10,12 +10,12 @@ import FriendsCards from "../../components/FriendsCards/FriendsCards";
 import { Redirect, Route, Switch } from "react-router-dom";
 import PagesUser from "../PageUser/PageUser";
 import Page404 from "../../components/Page404/Page404";
+import Direct from "../../components/Direct/Direct";
+import Explore from "../../components/Explore/Explore";
+import Heart from "../../components/Heart/Heart";
 
 const Main = () => {
-
   const dispatch = useDispatch();
- 
-  
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -63,7 +63,7 @@ const Main = () => {
     addedLocalStorage(_id);
     dispatch(updateCardsStore(newArray));
   };
-  const toggleIsOpenModal = (_id,e) => {
+  const toggleIsOpenModal = (_id, e) => {
     const newArray = cards.map((el) => {
       if (el._id === _id) {
         el.isOpenModal = !el.isOpenModal;
@@ -123,7 +123,37 @@ const Main = () => {
             />
           )}
         />
-        <Route path="*" component={Page404} />
+        <Route
+          exact
+          path="/direct/inbox"
+          render={() => (
+            <div className="box-direct">
+              <Header />
+              <Direct cards={cards} />
+            </div>
+          )}
+        />
+        <Route
+          exact
+          path="/explore"
+          render={() => (
+            <>
+              <Header />
+              <Explore />
+            </>
+          )}
+        />
+        <Route
+          exact
+          path="/heart"
+          render={() => (
+            <>
+              <Header />
+              <Heart />
+            </>
+          )}
+        />
+    
       </Switch>
     </>
   );

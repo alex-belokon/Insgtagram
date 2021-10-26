@@ -9,6 +9,8 @@ import { heart } from "./heart.js";
 import {coment} from "./coment.js";
 import {save} from "./save.js";
 import {smile} from "./smile.js"
+import {newMessage} from "./newMessage.js"
+import {arrowLow} from "./arrowLow.js"
 
 
 export {
@@ -22,5 +24,7 @@ export {
     heart,
     coment,
     save,
-    smile
+    smile,
+    newMessage,
+    arrowLow
 }

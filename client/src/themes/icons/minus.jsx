@@ -7,3 +7,4 @@ export const minus = ({color = "red", className}) => {
       </svg>
     )
   }
+

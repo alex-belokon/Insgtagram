@@ -22,22 +22,27 @@ const Header = () => {
               className="icon-home icon-header"
             />
           </Link>
-          <Icon
-            type="arrow"
-            color="#333333"
-            className="icon-arrow icon-header"
-          />
-          <Icon
-            type="compass"
-            color="#333333"
-            className="icon-compass icon-header"
-          />
-          <Icon
-            type="heart"
-            color="#333333"
-            className="icon-heart icon-header"
-          />
-
+          <Link Link to="/direct/inbox">
+            <Icon
+              type="arrow"
+              color="#333333"
+              className="icon-arrow icon-header"
+            />
+          </Link>
+          <Link to="/explore">
+            <Icon
+              type="compass"
+              color="#333333"
+              className="icon-compass icon-header"
+            />
+          </Link>
+          <Link to="/heart">
+            <Icon
+              type="heart"
+              color="#333333"
+              className="icon-heart icon-header"
+            />
+          </Link>
           <div className="user">
             <div>
               <Link to="/yulia_akimenkooo">

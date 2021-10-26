@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import Icon from "../Icon/Icon";
 import "./style.scss";
-//import { Link } from "react-router-dom";
 import LogoUser from "../Header/07_yulia_akimenkooo.jpg";
 import axios from "axios";
 
