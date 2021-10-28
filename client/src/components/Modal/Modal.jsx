@@ -26,7 +26,7 @@ const Modal = (props) => {
         .then((result) => {
           dispatch(udateComent(result.[nameArray]));
         }),
-    500
+    100
   );
   useEffect(() => {
     const polzun = document.getElementById('messages');

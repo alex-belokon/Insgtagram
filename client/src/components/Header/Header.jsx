@@ -29,7 +29,7 @@ const Header = () => {
               className="icon-arrow icon-header"
             />
           </Link>
-          <Link to="/explore">
+          <Link to="/garely/explore">
             <Icon
               type="compass"
               color="#333333"

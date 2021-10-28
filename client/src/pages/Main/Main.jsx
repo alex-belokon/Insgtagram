@@ -9,10 +9,9 @@ import NoFriendsCards from "../../components/NoFriendsCards/NoFriendsCards";
 import FriendsCards from "../../components/FriendsCards/FriendsCards";
 import { Redirect, Route, Switch } from "react-router-dom";
 import PagesUser from "../PageUser/PageUser";
-import Page404 from "../../components/Page404/Page404";
 import Direct from "../../components/Direct/Direct";
-import Explore from "../../components/Explore/Explore";
 import Heart from "../../components/Heart/Heart";
+import PhotoGalery from "../../components/PhotoGalery/PhotoGalery";
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -135,11 +134,11 @@ const Main = () => {
         />
         <Route
           exact
-          path="/explore"
+          path="/garely/explore"
           render={() => (
             <>
               <Header />
-              <Explore />
+              <PhotoGalery/>
             </>
           )}
         />
