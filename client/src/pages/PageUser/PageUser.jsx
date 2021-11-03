@@ -7,6 +7,7 @@ import { getCards } from '../../store/selectors'
 import Header from '../../components/Header/Header'
 
 const PagesUser = (props) => {
+
     const params = useParams()
     const {userId} = params
     const cards = useSelector(getCards)
@@ -18,6 +19,7 @@ const PagesUser = (props) => {
             {
                 result
                 .map(el => <User
+                userId={userId}
                  key={el._id}
                  name={el.name}             
                  _id={el._id}        

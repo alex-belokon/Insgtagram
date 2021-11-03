@@ -1,15 +1,17 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
-import LogoUser from "../Header/07_yulia_akimenkooo.jpg";
+import LogoUser from "../../usersImages/katerinakhaidukova/01_katerinakhaidukova.jpg";
 import Icon from "../Icon/Icon";
+import './form.scss'
 
 const Form = (props) => {
-  const { _id, nameArray } = props;
+  const { _id, nameArray, formButton, inputEnter } = props;
+
   const [values, setValues] = useState({
     _id: _id,
     photo: nameArray,
-    autor: "yulia_akimenkooo",
+    autor: "katerinakhaidukova",
     message: "",
     urlUser: LogoUser,
   });
@@ -35,11 +37,12 @@ const Form = (props) => {
   return (
     <div className="container-coment">
       <Icon type="smile" className="smile-icon" />
-      <form onSubmit={submitForm}>
+      <form onSubmit={submitForm} className="form-box">
         <div>
           <label className="input-enter" placeholder="Оставьте сообщение...">
             <input
-              placeholder="Оставьте сообщение..."
+            className={inputEnter}
+              placeholder="Добавьте комментарий..."
               type="text"
               name="message"
               value={values.message}
@@ -48,7 +51,7 @@ const Form = (props) => {
           </label>
         </div>
         <div>
-          <button type="submit">Опубликовать</button>
+          <button type="submit" className={formButton}>Опубликовать</button>
         </div>
       </form>
     </div>

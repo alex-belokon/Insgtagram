@@ -1,16 +1,19 @@
 import React from "react";
 import Icon from "../Icon/Icon";
 import "./style.scss";
-import FormikSignup from "../Forma/FormikSignup";
 import { Link } from "react-router-dom";
+import ComentBox from "../ComentBox/ComentBox";
+import Form from "../Forma/Form";
 
 const UserCard = (props) => {
-  const { name, url, isInfavorite, _id, toggleFavorite, LifeСredo, cards } =
+
+  const { name, url, isInfavorite, _id, toggleFavorite, LifeСredo } =
     props;
+    const link = `${name}`
 
   return (
     <li className="container-card">
-      <Link to={name}>
+      <Link to={link}>
         <div className="title-cards">
           <img className="title-cards__photo-small" src={url} alt={name} />
           <div className="title-cards__title-container">
@@ -33,6 +36,7 @@ const UserCard = (props) => {
             color={isInfavorite ? "red" : "white"}
             type="heart"
             className="star-class"
+            onClick={() => toggleFavorite(_id)}
           />
           <Icon color="#333333" type="coment" className="coment-class" />
           <Icon color="#333333" type="arrow" className="arrow-class" />
@@ -41,7 +45,12 @@ const UserCard = (props) => {
           <Icon color="#333333" type="save" className="save-class" />
         </div>
       </div>
-      <FormikSignup _id={_id} cards={cards} url={url} />
+      <ComentBox _id={_id}/>
+      <Form 
+      formButton="form-button"
+      inputEnter="input-enterCards" 
+      _id={_id} 
+      nameArray="urlcoment" />
     </li>
   );
 };

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const DirectUser = (props) => {
   const { name, url} = props;
-  const urlUser = ["." + `${url}`];
+  const urlUser = ["." + url];
   const uriy = urlUser.toString()
   
   return (

@@ -18,7 +18,7 @@ const Modal = (props) => {
     nameArray,
     toggleIsOpenModal,
   } = props;
-  
+ 
   setTimeout(
     () =>
       fetch(`http://localhost:5000/api/users/${_id}`)
@@ -52,11 +52,11 @@ const Modal = (props) => {
             </div>
             <div className="message-box" id="messages">
               {messageArray.map((item) => (
-                <li className="message-container">
+                <li key={item.message} className="message-container">
                   <div>
                     <Link
                       to={item.autor}
-                      key={item.urlUser}
+                      key={item.autor}
                       className="icon-cont"
                     >
                       <img
@@ -74,7 +74,13 @@ const Modal = (props) => {
               ))}
             </div>
             <div>
-              <Form _id={_id} url={url} nameArray={nameArray} />
+              <Form
+              inputEnter="input-enterModal" 
+              formButton="form-buttonModal"
+              _id={_id} 
+              url={url} 
+              nameArray={nameArray}
+               />
             </div>
           </div>
         </div>

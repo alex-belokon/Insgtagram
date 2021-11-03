@@ -170,7 +170,7 @@ const Gallery = () => {
     return(
         <>
         <div className={model? 'model open' : 'model'}>
-        <img src={tempimgSrc}/>
+        <img src={tempimgSrc} alt="img"/>
         <CloseIcon onClick={() => setModel(false)}/>
         </div>
         <ul className="gallery">

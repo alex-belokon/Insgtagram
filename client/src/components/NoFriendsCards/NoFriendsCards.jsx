@@ -1,7 +1,7 @@
 import React from "react";
 import NoFriendCard from "../NoFriendCard/NoFriendCard";
 import "./style.scss";
-import urlUser from "../Header/07_yulia_akimenkooo.jpg";
+import urlUser from "../../usersImages/katerinakhaidukova/01_katerinakhaidukova.jpg";
 
 const NoFriendsCards = (props) => {
   const { cards, toggleFavorite, toggleAdded } = props;
@@ -16,9 +16,9 @@ const NoFriendsCards = (props) => {
             alt="yulia_akimenkooo"
           />
           <div className="title-card__title-container">
-            <h2 className="title-card__name">"yulia_akimenkooo"</h2>
+            <h2 className="title-card__name">"katerinakhaidukova"</h2>
             <p className="title-card__life-credo">
-              Побороть дурные привычки...
+            Нельзя брать прошлое с собой...
             </p>
           </div>
         </div>

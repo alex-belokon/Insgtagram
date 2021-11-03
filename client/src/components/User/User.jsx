@@ -53,8 +53,9 @@ const User = (props) => {
     url9coment,
     url10coment,
     isOpenModal,
-    toggleIsOpenModal,
+    toggleIsOpenModal
   } = props;
+
 
   const toggle = (url) => {
     cards.map((el) => {
@@ -228,12 +229,7 @@ const User = (props) => {
         <div className="header-box__content box">
           <div className="box__button">
             <h2>{name}</h2>
-            <button
-              className={added ? "box__added" : "box__noadded"}
-              onClick={() => toggleAdded(_id)}
-            >
-              {added ? "Подписан" : "Оформить подписку?"}
-            </button>
+            <button className="button15" onClick={() => toggleAdded(_id)}>{added ? "Подписан" : "Оформить подписку?"}</button>
           </div>
           <div className="box__viewer">
             <p className="box__text">125 публикаций</p>

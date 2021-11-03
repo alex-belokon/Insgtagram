@@ -26,6 +26,7 @@ const UserList = (props) => {
                 _id={userCards._id}
                 isInfavorite={userCards.isInfavorite}
                 url={userCards.url}
+               
             >
             </UserCard>)}
     </ul>

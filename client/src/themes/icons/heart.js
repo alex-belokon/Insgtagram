@@ -1,7 +1,7 @@
 export const heart = ({ color = "black", className}) => {
     return (
         <svg
-	 width="25" 
+	 width="28" 
      height="25" 
      viewBox="0 0 437.775 437.774" 
      fill="#262626" 

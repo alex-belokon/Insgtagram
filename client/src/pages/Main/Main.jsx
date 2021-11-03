@@ -3,15 +3,18 @@ import { fetchUsers, updateCardsStore } from "../../store/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { getCards } from "../../store/selectors";
 import "./style.scss";
-import AppRoutes from "../../routes/AppRoutes";
+import AppRoutes from "../../GetUsers/GetUsers";
 import Header from "../../components/Header/Header";
 import NoFriendsCards from "../../components/NoFriendsCards/NoFriendsCards";
 import FriendsCards from "../../components/FriendsCards/FriendsCards";
+import { BrowserRouter} from 'react-router-dom';
 import { Redirect, Route, Switch } from "react-router-dom";
 import PagesUser from "../PageUser/PageUser";
 import Direct from "../../components/Direct/Direct";
-import Heart from "../../components/Heart/Heart";
 import PhotoGalery from "../../components/PhotoGalery/PhotoGalery";
+
+
+
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -71,17 +74,18 @@ const Main = () => {
     });
     dispatch(updateCardsStore(newArray));
   };
-
+  
   return (
-    <>
+    <>  
+    <BrowserRouter>
       <Switch>
-        <Redirect exact from="/" to="home" />
+      <Redirect exact from="/" to="home" />
         <Route
           exact
           path="/home"
-          render={(routerProps) => (
+          render={() => (
             <>
-              <Header />
+            <Header cards={cards} toggleAdded={toggleAdded} />
               <div className="container-main">
                 <div className="left">
                   <AppRoutes
@@ -110,7 +114,25 @@ const Main = () => {
             </>
           )}
         />
-        <Route
+       <Route 
+        path="/direct" 
+        render={() => (
+            <div className="box-direct">
+              <Header cards={cards} toggleAdded={toggleAdded} />
+              <Direct cards={cards} />
+            </div>
+        )}
+        /> 
+          <Route 
+          path="/garely"
+          render={() => (
+            <div>
+              <Header cards={cards} toggleAdded={toggleAdded} />
+              <PhotoGalery/>
+            </div>
+          )}
+        /> 
+          <Route
           exact
           path="/:userId"
           render={(routerProps) => (
@@ -121,39 +143,9 @@ const Main = () => {
               {...routerProps}
             />
           )}
-        />
-        <Route
-          exact
-          path="/direct/inbox"
-          render={() => (
-            <div className="box-direct">
-              <Header />
-              <Direct cards={cards} />
-            </div>
-          )}
-        />
-        <Route
-          exact
-          path="/garely/explore"
-          render={() => (
-            <>
-              <Header />
-              <PhotoGalery/>
-            </>
-          )}
-        />
-        <Route
-          exact
-          path="/heart"
-          render={() => (
-            <>
-              <Header />
-              <Heart />
-            </>
-          )}
-        />
-    
+        /> 
       </Switch>
+      </BrowserRouter>
     </>
   );
 };

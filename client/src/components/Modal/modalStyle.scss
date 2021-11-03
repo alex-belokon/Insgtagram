@@ -18,7 +18,7 @@ $color-over: rgba(0, 0, 0, 0.7);
   transform: translate(-50%, -50%);
   background-color: $background-color;
   min-height: 42vh;
-  min-width: 75vh;
+  min-width: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -103,8 +103,6 @@ $color-over: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  align-self: center;
   margin: 20px 7px 15px 10px;
   border-bottom: 0.8px solid rgb(173, 171, 171);
   padding-bottom: 12px;
@@ -129,6 +127,12 @@ $color-over: rgba(0, 0, 0, 0.7);
 }
 .message-box {
   overflow-y: scroll;
-  max-height: 37vh;
   margin-bottom: 5px;
+}
+.max-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 75vh;
+  min-height: 75vh;
 }

@@ -4,7 +4,6 @@ import DirectUser from "../DirectUser/DirectUser";
 
 const DirectList = (props) => {
   const { cards } = props;
-  console.log(cards);
 
   return (
     <div>
