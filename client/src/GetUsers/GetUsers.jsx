@@ -4,7 +4,7 @@ import UserList from "../components/UserList/UserList"
 
 
 
-const AppRoutes = (props) => {
+const GetUsers = (props) => {
     const { toggleAdded, toggleFavorite, cards } = props
 
     return (
@@ -18,4 +18,4 @@ const AppRoutes = (props) => {
     )
 }
 
-export default AppRoutes;
+export default GetUsers;

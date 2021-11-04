@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
+import "./style.scss";
 import { fetchUsers, updateCardsStore } from "../../store/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { getCards } from "../../store/selectors";
-import "./style.scss";
-import AppRoutes from "../../GetUsers/GetUsers";
 import Header from "../../components/Header/Header";
 import NoFriendsCards from "../../components/NoFriendsCards/NoFriendsCards";
 import FriendsCards from "../../components/FriendsCards/FriendsCards";
@@ -12,6 +11,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import PagesUser from "../PageUser/PageUser";
 import Direct from "../../components/Direct/Direct";
 import PhotoGalery from "../../components/PhotoGalery/PhotoGalery";
+import GetUsers from "../../GetUsers/GetUsers";
 
 
 
@@ -88,7 +88,7 @@ const Main = () => {
             <Header cards={cards} toggleAdded={toggleAdded} />
               <div className="container-main">
                 <div className="left">
-                  <AppRoutes
+                  <GetUsers
                     toggleAdded={toggleAdded}
                     toggleFavorite={toggleFavorite}
                     cards={cards}
