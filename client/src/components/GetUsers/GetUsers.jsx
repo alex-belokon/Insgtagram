@@ -1,5 +1,5 @@
 import React from 'react'
-import UserList from "../components/UserList/UserList"
+import UserList from "../UserList/UserList"
 
 
 
