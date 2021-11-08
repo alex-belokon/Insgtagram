@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import LogoUser from "../../usersImages/katerinakhaidukova/01_katerinakhaidukova.jpg";
 import Icon from "../Icon/Icon";
-import './form.scss'
+import "./form.scss";
 
 const Form = (props) => {
   const { _id, nameArray, formButton, inputEnter } = props;
@@ -41,7 +41,8 @@ const Form = (props) => {
         <div>
           <label className="input-enter" placeholder="Оставьте сообщение...">
             <input
-            className={inputEnter}
+            id="testinputFofm"
+              className={inputEnter}
               placeholder="Добавьте комментарий..."
               type="text"
               name="message"
@@ -51,7 +52,11 @@ const Form = (props) => {
           </label>
         </div>
         <div>
-          <button type="submit" className={formButton}>Опубликовать</button>
+          <button 
+          id="testButtonForm"
+          type="submit" className={formButton}>
+            Опубликовать
+          </button>
         </div>
       </form>
     </div>

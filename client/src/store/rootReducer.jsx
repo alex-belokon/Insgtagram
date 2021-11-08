@@ -1,11 +1,11 @@
 import { MESSAGE, UPDATE_CARDS } from "./types";
 
-const initialState = {
+export const initialState = {
   cards: [],
   message: [],
 };
 
-const rootReducer = (state = initialState, action) => {
+export const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_CARDS:
       return { ...state, cards: action.payload.cards };

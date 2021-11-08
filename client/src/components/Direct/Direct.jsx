@@ -24,7 +24,7 @@ const Direct = (props) => {
             </div>
           </div>
           <div>
-            <DirectList cards={cards} />
+            <DirectList id='directList' cards={cards} />
           </div>
         </div>
         <div className="direct-container__right">

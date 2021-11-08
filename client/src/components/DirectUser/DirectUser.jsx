@@ -9,10 +9,10 @@ const DirectUser = (props) => {
   
   return (
     <div className="userList-container">
-      <Link to={name}>
+      <Link to={name} id="testLinkDirectUser">
         <div className="icon-comtainer">
           <img src={uriy} alt={name} className="icon-direct" />
-          <h2>{name}</h2>
+          <h2 id="testH2DirectUser">{name}</h2>
         </div>
       </Link>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Form from "../Forma/Form";
 import "./modalStyle.scss";
@@ -9,16 +9,11 @@ import { udateComent } from "../../store/actions";
 const Modal = (props) => {
   const dispatch = useDispatch();
   const messageArray = useSelector(getMessage);
-  const {
-    _id,
-    urlImage,
-    url,
-    country,
-    name,
-    nameArray,
-    toggleIsOpenModal,
-  } = props;
+  const { _id, urlImage, url, country, name, nameArray, toggleIsOpenModal } =
+    props;
+
  
+
   setTimeout(
     () =>
       fetch(`http://localhost:5000/api/users/${_id}`)
@@ -28,8 +23,9 @@ const Modal = (props) => {
         }),
     100
   );
+ 
   useEffect(() => {
-    const polzun = document.getElementById('messages');
+    const polzun = document.getElementById("messages");
     polzun.scrollTop = polzun.scrollHeight;
   });
 
@@ -46,10 +42,11 @@ const Modal = (props) => {
                 <img src={url} alt="user" className="icon-c" />
               </div>
               <div>
-                <h2>{name}</h2>
-                <h3>{country}</h3>
+                <h2 id="name">{name}</h2>
+                <h3 id="country">{country}</h3>
               </div>
             </div>
+            <div>
             <div className="message-box" id="messages">
               {messageArray.map((item) => (
                 <li key={item.message} className="message-container">
@@ -75,12 +72,13 @@ const Modal = (props) => {
             </div>
             <div>
               <Form
-              inputEnter="input-enterModal" 
-              formButton="form-buttonModal"
-              _id={_id} 
-              url={url} 
-              nameArray={nameArray}
-               />
+                inputEnter="input-enterModal"
+                formButton="form-buttonModal"
+                _id={_id}
+                url={url}
+                nameArray={nameArray}
+              />
+            </div>
             </div>
           </div>
         </div>

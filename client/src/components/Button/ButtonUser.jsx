@@ -1,14 +1,14 @@
 import React from "react";
 import "./button.scss";
-import { Button, Row } from 'react-bootstrap';
+import { Button, Row } from "react-bootstrap";
 
-
-const ButtonUser = (props) => {
-  const {text, className} = props;
+const ButtonUser = ({ text, className }) => {
   return (
     <div className="button">
       <Row className="mx-0">
-      <Button type="button" className={className}>{text}</Button>
+        <Button data-testid="button" type="button" className={className}>
+          {text}
+        </Button>
       </Row>
     </div>
   );
